@@ -1,102 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>EXXRZ GENES 下载中心</title>
+    <meta charset="UTF-8">
+    <title>EX-XRZ-GAMES</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background: #f8f9fa;
-            font-family: 'Arial', sans-serif;
+        /* 像素字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+        :root {
+            --pixel-font: 'Pixelify Sans', 'Press Start 2P', cursive;
+            --main-bg: linear-gradient(135deg, #A8E6CF 0%, #48C9B0 100%);
+            --box-color: rgba(255, 255, 255, 0.9);
         }
 
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        body {
+            background: var(--main-bg);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--pixel-font);
             position: relative;
         }
 
-        .logo::after {
-            content: '';
-            display: block;
-            width: 60%;
-            height: 3px;
-            background: #2196F3;
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        .download-btn {
-            padding: 20px 50px;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, #2196F3, #1976D2);
-            color: white;
-            border: none;
+        /* 主内容盒子 */
+        .main-box {
+            background: var(--box-color);
+            width: 400px;
+            padding: 40px;
+            border: 4px solid #2C3E50;
             border-radius: 12px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
-            text-decoration: none;
-            margin-bottom: 20px; /* 增加与作者按钮的间距 */
+            box-shadow: 8px 8px 0 #2C3E50;
+            margin-top: 80px;
+            position: relative;
         }
 
-        .author-btn {
-            padding: 12px 30px;
-            font-size: 1rem;
-            background: #607D8B;
+        /* 工作室标题 */
+        .studio-title {
+            color: #2C3E50;
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 0 0 30px 0;
+            text-shadow: 2px 2px 0 #48C9B0;
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #FF6B6B;
             color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
+            text-align: center;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .author-btn:hover {
-            background: #546E7A;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .author-btn:active {
-            transform: translateY(1px);
+            border: 3px solid #2C3E50;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            transition: all 0.2s;
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+            box-shadow: 4px 4px 0 #2C3E50;
         }
 
-        .download-btn:active {
-            transform: translateY(1px);
-            box-shadow: 0 3px 10px rgba(33, 150, 243, 0.3);
+        /* 信息区块 */
+        .info-block {
+            text-align: center;
+            margin: 25px 0;
+            color: #2C3E50;
+        }
+
+        .info-block p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        /* 社交链接 */
+        .social-group {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            color: #2C3E50;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 2px solid #2C3E50;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: #48C9B0;
+            color: white;
+        }
+
+        /* 备案信息 */
+        .footer-record {
+            position: absolute;
+            bottom: 20px;
+            color: #2C3E50;
+            font-size: 0.8rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1 class="logo">EXXRZ GENES</h1>
-    
-    <a href="https://files.zohopublic.com.cn/public/workdrive-public/download/w7e3cc5f6efe53d8a4f818d0ab20b57286aaa?x-cli-msg=%7B%22linkId%22%3A%221unyHFug37r-35DW6%22%2C%22isFileOwner%22%3Afalse%2C%22version%22%3A%221.0%22%7D"
-       download="EXXRZ_FILE.zip"
-       class="download-btn">
-        DOWNLOAD NOW
-    </a>
+    <div class="main-box">
+        <h1 class="studio-title">EX-XRZ-GAMES</h1>
+        
+        <a href="https://files.zohopublic.com.cn/public/workdrive-public/download/w7e3cbd85c26b4d1f4d6bb7bfbd7cf0" 
+           class="download-btn">立即下载游戏</a>
 
-    <a href="https://space.bilibili.com/3546687180114805?spm_id_from=333.1007.0.0" 
-       target="_blank"
-       class="author-btn">
-        访问作者主页
-    </a>
+        <div class="info-block">
+            <p>作者：kathigui</p>
+            <p>游戏引擎：GameMaker</p>
+        </div>
+
+        <div class="social-group">
+            <a href="https://space.bilibili.com/3546687180114805?spm_id_from=333.1007.0.0" 
+               class="social-link" 
+               target="_blank">哔哩哔哩</a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAHuWMaaJmgNG5Vl15cLtCvOvwB2bn9CcVwYZFXsnS6nAwRPGeU69bJvifXFalDZkC?from_tab_name=main&is_search=0&list_name=fans&nt=0" 
+               class="social-link" 
+               target="_blank">抖音</a>
+        </div>
+    </div>
+
+    <div class="footer-record">
+        沪ICP备20240666号-1 | 网络文化经营许可证：沪网文(2024)6666-666号
+    </div>
 </body>
 </html>
